@@ -34,6 +34,6 @@ rem    GDAL_NATIVE    [true | false]  - default false; build with GDAL support
 rem    GS_VERSION                     - specifies which version of geoserver is to be built
 
 rem Valid for AMD64 (i.e., t3a.medium)
-docker build --build-arg GS_VERSION=${GS_VERSION} --build-arg TOMCAT_EXTRAS=false --build-arg GDAL_NATIVE=false --platform linux/amd64 -t thinkwhere/geoserver:${GS_VERSION} .
+rem docker build --build-arg GS_VERSION=${GS_VERSION} --build-arg TOMCAT_EXTRAS=false --build-arg GDAL_NATIVE=false --platform linux/amd64 -t thinkwhere/geoserver:${GS_VERSION} .
 rem Valid also for ARM64 (i.e., t4g.medium)
-rem docker buildx build --build-arg GS_VERSION=%GS_VERSION% --build-arg TOMCAT_EXTRAS=false --build-arg GDAL_NATIVE=false --platform linux/arm64/v8 -t thinkwhere/geoserver:%GS_VERSION% --push .
+docker buildx build --build-arg GS_VERSION=%GS_VERSION% --build-arg TOMCAT_EXTRAS=false --build-arg GDAL_NATIVE=false --platform linux/arm64/v8 -t thinkwhere/geoserver:%GS_VERSION% --push .
