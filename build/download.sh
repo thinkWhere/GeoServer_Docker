@@ -18,7 +18,7 @@ then
 fi
 
 # Add in selected plugins.  Comment out or modify as required
-plugins=(control-flow inspire monitor css ysld web-resource sldservice)
+plugins=(control-flow inspire monitor css ysld web-resource sldservice gwc-s3)
 
 for p in "${plugins[@]}"
 do

@@ -1,6 +1,6 @@
 #--------- Generic stuff all our Dockerfiles should start with so we get caching ------------
 # Defaults to amd64:
-FROM tomcat:9-jre11-temurin@sha256:ab47680f4dd6785e7f19fe7e9f2cd7fce0819c4a223ea98d8c39a38ea810bdde
+FROM tomcat:9-jre11-temurin@sha256:f4cc53f42b3f25689119a153ff4af60d7b71e5e1668e2e70c4c550d23a7f3344
 # Valid for arm64:
 # FROM tomcat:9-jre11-temurin@sha256:7477976d90cf983f6efe920cad41c1773481ddf61f403f59cfc1db1979c4150b
 #9.0-jre11-slim
@@ -28,9 +28,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
 	GDAL_SKIP="ECW JP2ECW" \
 	GDAL_DATA=/usr/local/gdal-data \
 	# AMD64 architecture:
-	# LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/apr/lib:/usr/lib:/usr/lib/x86_64-linux-gnu"
+	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/apr/lib:/usr/lib:/usr/lib/x86_64-linux-gnu"
 	# ARM64 architecture:
-	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/apr/lib:/usr/lib:/usr/lib/aarch64-linux-gnu"
+	# LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/apr/lib:/usr/lib:/usr/lib/aarch64-linux-gnu"
 
 
 RUN mkdir -p ${GEOSERVER_DATA_DIR}
