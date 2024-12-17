@@ -1,8 +1,8 @@
 #--------- Generic stuff all our Dockerfiles should start with so we get caching ------------
 # Defaults to amd64:
-FROM tomcat:9-jre11-temurin@sha256:bf23f2dffde0c1b6ef6eaba95e05f531a3a6f274c5234d10126d73b092db18b6
+FROM tomcat:9-jre11-temurin@sha256:f4cc53f42b3f25689119a153ff4af60d7b71e5e1668e2e70c4c550d23a7f3344
 # Valid for arm64:
-# FROM tomcat:9-jre11-temurin@sha256:96f05b79814a1fb0523e3063668b4e3be7a1bbb01e6e6b2757915764381825ac
+# FROM tomcat:9-jre11-temurin@sha256:7477976d90cf983f6efe920cad41c1773481ddf61f403f59cfc1db1979c4150b
 #9.0-jre11-slim
 #9.0.65-jdk11-openjdk-slim
 MAINTAINER thinkWhere<info@thinkwhere.com>
